@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {{.Title}}
+
+      <link rel="stylesheet" href="./static/css/index.css"/>
+    </head>
+    <body>
+      <div class="peer">
+        <h3>{{.peerid}}</h3>
+      </div>
+<div class="grppeer">
+  {{if .grpname}}
+ <h1 class="info">Group :{{.grpname}}  | Peers Connected: {{.nopeer}}</h1>
+
+ {{end}}
+ <div class="view-peer">
+
+ </div>
+</div>
+<iframe src="/metrics" scrolling="no" class="monitor" ></iframe>
+<div class="cmd">
+  <button class="dropmenu">chat</button>
+  <div class="dropdown-content">
+    <a href="#">Change Group</a>
+    <a href="#">Change Username</a>
+    <a href="#">List Group Peers</a>
+    <a href="#">List Service Peers</a>
+    <a href="#">Join Group</a>
+    <a href="#">File Services</a>
+
+    
+  </div>
+
+  
+</div>
+<div class="display-contain" id="root">
+ 
+  <div class="chtmsg">
+    <div class="bub"></div>
+    <h1>sender</h1>
+    <p>message</p>
+
+  </div>
+ 
+  <div class="chtmsg">
+    <div class="bub"></div>
+    <h1>sender</h1>
+    <p>message</p>
+
+  </div>
+
+
+</div>
+<form><input type="text" id="tsend" name="send">
+      <button class="submit">Send</button>
+</form>
+    </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="./static/js/fetch.js"  ></script>
+
+
+
+</html>
